@@ -1,0 +1,51 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:FightClubGame"
+        xmlns:CustomButton="clr-namespace:CustomButton;assembly=CustomButton" x:Class="FightClubGame.Views.MainWindow"
+           mc:Ignorable="d"
+        Title="Fight Club" Height="799" Width="1200" WindowStyle="None" AllowsTransparency="True" >
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="30" Opacity="0.98"/>
+    </Window.Effect>
+    <Grid Background="#FF6F644E">
+        <Image x:Name="image" Margin="117,68,115,0" Source="../Resources/title.png" Stretch="Fill" Height="228" VerticalAlignment="Top" OpacityMask="White" HorizontalAlignment="Center" Width="568">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="60" ShadowDepth="0" Color="#FF40382C"/>
+            </Image.Effect>
+        </Image>
+        <CustomButton:Button x:Name="PlayButton" Font="Arial" HorizontalAlignment="Center" Margin="281,344,280,0"  VerticalAlignment="Top" Width="239" Text="Play" RoundX="5" RoundY="5" FillColor="#FF40382C" HoverColor="#FF7C8100" DownColor="#FF343601" ForegroundColor="#FFCDCDCD" SecondColor="#FFACACAC" StrokeColor="Black" Height="58" FontFamily="Franklin Gothic Medium" FontSize="22" Foreground="#FF40382C" StrokeThickness="2" MouseLeftButtonUp="PlayButton_MouseLeftButtonUp">
+            <CustomButton:Button.Effect>
+                <DropShadowEffect BlurRadius="50" ShadowDepth="0" Opacity="0.7" Color="#FF40382C"/>
+            </CustomButton:Button.Effect>
+        </CustomButton:Button>
+        <CustomButton:Button x:Name="OptionsButton" Font="Arial" HorizontalAlignment="Center" Margin="281,419,280,0"  VerticalAlignment="Top" Width="239" Text="Options" RoundX="5" RoundY="5" FillColor="#FF40382C" HoverColor="#FF7C8100" DownColor="#FF343601" ForegroundColor="#FFCDCDCD" SecondColor="#FFACACAC" StrokeColor="Black" Height="58" FontFamily="Franklin Gothic Medium" FontSize="22" Foreground="#FF40382C" StrokeThickness="2" MouseLeftButtonUp="OptionsButton_MouseLeftButtonUp">
+            <CustomButton:Button.Effect>
+                <DropShadowEffect BlurRadius="50" ShadowDepth="0" Opacity="0.7" Color="#FF40382C"/>
+            </CustomButton:Button.Effect>
+        </CustomButton:Button>
+        <CustomButton:Button x:Name="ExitButton" Font="Arial" HorizontalAlignment="Center" Margin="281,494,280,0"  VerticalAlignment="Top" Width="239" Text="Exit" RoundX="5" RoundY="5" FillColor="#FF40382C" HoverColor="#FF7C8100" DownColor="#FF343601" ForegroundColor="#FFCDCDCD" SecondColor="#FFACACAC" StrokeColor="Black" Height="58" FontFamily="Franklin Gothic Medium" FontSize="22" Foreground="#FF40382C" StrokeThickness="2">
+            <CustomButton:Button.Effect>
+                <DropShadowEffect BlurRadius="50" ShadowDepth="0" Opacity="0.7" Color="#FF40382C"/>
+            </CustomButton:Button.Effect>
+        </CustomButton:Button>
+        <Grid x:Name="host" HorizontalAlignment="Right" Width="1200" Height="799" VerticalAlignment="Top">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+            </Grid.Effect>
+        </Grid>
+        <Rectangle Fill="#FF40382C" Height="37" VerticalAlignment="Top" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <CustomButton:Button HorizontalAlignment="Right" Margin="0,11,15,0" VerticalAlignment="Top" Height="20" Width="20" RoundX="10" RoundY="10" Text="" FillColor="#FF630000" StrokeColor="Black" FontFamily="Arial" FontSize="10" HoverColor="Red" DownColor="#FF380000">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <i:InvokeCommandAction Command="{Binding ExitCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </CustomButton:Button>
+
+
+    </Grid>
+</Window>

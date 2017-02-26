@@ -1,0 +1,41 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FightClubGame.Views"
+             xmlns:CustomButton="clr-namespace:CustomButton;assembly=CustomButton" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" x:Class="FightClubGame.Views.Options"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Visibility="{Binding Visibility}">
+    <Grid>
+
+        <Grid Background="#FF6F644E">
+            <Rectangle Fill="#FF40382C" HorizontalAlignment="Center" Margin="10,43,10,225" Width="280" RadiusX="5" RadiusY="5" Stroke="Black" Height="32" VerticalAlignment="Center">
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Opacity="0.6"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="17,5,137,261" TextWrapping="Wrap" Text="Player name:" VerticalAlignment="Center" FontSize="25" Foreground="#FF252525" Width="146"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Center" Height="32" Margin="17,43,15,225" TextWrapping="Wrap" Text="{Binding PlayerName,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="268" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="#FF21B400" BorderThickness="0" FontSize="20" Foreground="#FFB90000"/>
+            <ComboBox ItemsSource="{Binding Path=Characters,UpdateSourceTrigger=PropertyChanged}" SelectedValue="{Binding Character,UpdateSourceTrigger=PropertyChanged}" x:Name="comboBox" HorizontalAlignment="Center" Margin="10,80,10,193" VerticalAlignment="Center" Width="280" Height="27" BorderBrush="Black" Foreground="Black" BorderThickness="0" AutomationProperties.HelpText="Choose the character" Text="fegthryhy" Background="Black"/>
+            <Rectangle Fill="#FF40382C" HorizontalAlignment="Center" Margin="10,148,10,120" Width="280" RadiusX="5" RadiusY="5" Stroke="Black" Height="32" VerticalAlignment="Center">
+                <Rectangle.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Opacity="0.6"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBlock x:Name="roundDurationTextBlock" HorizontalAlignment="Center" Margin="17,94,48,140" TextWrapping="Wrap" Text="Round duration:" VerticalAlignment="Center" FontSize="25" Foreground="#FF252525" Width="235"/>
+            <TextBox x:Name="roundDurationTextBox" HorizontalAlignment="Center" Height="32" Margin="17,148,15,120" TextWrapping="Wrap" Text="{Binding RoundDuration, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Width="268" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="#FF21B400" BorderThickness="0" FontSize="20" Foreground="#FFB90000"/>
+            <CustomButton:Button x:Name="SaveButton" Font="Arial" HorizontalAlignment="Center" Margin="17,230,156,22"  VerticalAlignment="Center" Width="127" Text="Save" RoundX="5" RoundY="5" FillColor="#FF40382C" HoverColor="#FF7C8100" DownColor="#FF343601" ForegroundColor="#FFCDCDCD" SecondColor="#FFACACAC" StrokeColor="Black" Height="48" FontFamily="Franklin Gothic Medium" FontSize="22" Foreground="#FF40382C" StrokeThickness="1">
+                <CustomButton:Button.Effect>
+                    <DropShadowEffect BlurRadius="50" ShadowDepth="0" Opacity="0.7" Color="#FF40382C"/>
+                </CustomButton:Button.Effect>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <i:InvokeCommandAction Command="{Binding SaveCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CustomButton:Button>
+        </Grid>
+
+    </Grid>
+</UserControl>
