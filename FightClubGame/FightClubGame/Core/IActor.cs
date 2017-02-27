@@ -16,8 +16,8 @@ namespace FightClubGame.Core
         abstract public void decideBlockPart();
         public string hitActor()
         {
-            if (Character.Health <= 0) return Character.Name + " is death ";
-            if (opponent.Character.Health <= 0) return opponent.Character.Name + " is death ";
+            if (Character.Health <= 0) return Character.Name + " is dead ";
+            if (opponent.Character.Health <= 0) return opponent.Character.Name + " is dead ";
             return Character.hitFighter(opponent.Character, decideHitPart());
         }
 

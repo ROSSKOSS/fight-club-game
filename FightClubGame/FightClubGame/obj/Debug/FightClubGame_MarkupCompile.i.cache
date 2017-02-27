@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Documents\Visual Studio 2015\Projects\FightClubGame\FightClubGame\obj\Debug\
+C:\Users\User\Documents\Github\fight-club-game\FightClubGame\FightClubGame\obj\Debug\
 FightClubGame
 none
 false
 DEBUG;TRACE
-C:\Users\User\Documents\Visual Studio 2015\Projects\FightClubGame\FightClubGame\App.xaml
+C:\Users\User\Documents\Github\fight-club-game\FightClubGame\FightClubGame\App.xaml
 3965503907
 
-24103816633
-15770515682
+26-351320253
+152115601809
 Views\MainWindow.xaml;Views\Options.xaml;Views\Play.xaml;
 
-True
+False
 

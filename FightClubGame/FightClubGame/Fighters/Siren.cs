@@ -14,6 +14,7 @@ namespace FightClubGame.Fighters
         {
             bodyparts = new Dictionary<int, string>();
             Health = 100;
+            Name = "Siren";
             bodyparts.Add(0, "head");
             bodyparts.Add(1, "left wing");
             bodyparts.Add(2, "right wing");

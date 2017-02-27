@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FightClubGame.Views"
              mc:Ignorable="d" Height="799.5" Width="1200">
-    <Grid Background="#FF6F644E">
-        <ProgressBar HorizontalAlignment="Left" Height="53" Margin="10,56,0,0" VerticalAlignment="Top" Width="543" BorderBrush="Black" Background="#FFA0A0A0" Value="102" BorderThickness="2">
+    <Grid Background="#FF8A8D91">
+        <ProgressBar HorizontalAlignment="Left" Height="53" Margin="10,56,0,0" VerticalAlignment="Top" Width="543" BorderBrush="Black" Background="#FFA0A0A0" Value="102" BorderThickness="2" Foreground="#FF007816">
             <ProgressBar.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#FF40382C"/>
             </ProgressBar.Effect>
         </ProgressBar>
-        <ProgressBar Height="54" Margin="680,54,9,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Background="#FFB9B9B9" Value="100" BorderThickness="2">
+        <ProgressBar Height="54" Margin="680,54,9,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" BorderBrush="Black" Background="#FFB9B9B9" Value="100" BorderThickness="2" Foreground="#FF007816">
             <ProgressBar.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#FF40382C"/>
             </ProgressBar.Effect>
@@ -24,16 +24,17 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <Label x:Name="label" Content="Player" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="Computer" HorizontalAlignment="Left" Margin="1127,56,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerName" Content="Player" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="OpponentName" Content="Computer" HorizontalAlignment="Left" Margin="683,56,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Rectangle Fill="#FF40382C" Height="582" Margin="344,195,307,0" RadiusY="5" RadiusX="5" Stroke="Black" VerticalAlignment="Top">
             <Rectangle.Effect>
-                <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
+                <DropShadowEffect ShadowDepth="0" BlurRadius="30" Opacity="0.7"/>
             </Rectangle.Effect>
         </Rectangle>
-        <ScrollViewer Margin="368,210,327,37">
+        <ScrollViewer Margin="368,210,327,37" VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="radioButtonHost"/>
         </ScrollViewer>
+        <Label x:Name="Time" Content="30" HorizontalAlignment="Left" Margin="598,56,0,0" VerticalAlignment="Top" FontSize="30"/>
 
     </Grid>
 </UserControl>

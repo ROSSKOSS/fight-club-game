@@ -11,7 +11,7 @@
     <Window.Effect>
         <DropShadowEffect BlurRadius="30" Opacity="0.98"/>
     </Window.Effect>
-    <Grid Background="#FF6F644E">
+    <Grid Background="#FF8A8D91">
         <Image x:Name="image" Margin="117,68,115,0" Source="../Resources/title.png" Stretch="Fill" Height="228" VerticalAlignment="Top" OpacityMask="White" HorizontalAlignment="Center" Width="568">
             <Image.Effect>
                 <DropShadowEffect BlurRadius="60" ShadowDepth="0" Color="#FF40382C"/>
@@ -31,13 +31,18 @@
             <CustomButton:Button.Effect>
                 <DropShadowEffect BlurRadius="50" ShadowDepth="0" Opacity="0.7" Color="#FF40382C"/>
             </CustomButton:Button.Effect>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <i:InvokeCommandAction Command="{Binding ExitCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </CustomButton:Button>
         <Grid x:Name="host" HorizontalAlignment="Right" Width="1200" Height="799" VerticalAlignment="Top">
             <Grid.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="15"/>
             </Grid.Effect>
         </Grid>
-        <Rectangle Fill="#FF40382C" Height="37" VerticalAlignment="Top" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Rectangle Fill="#FF565857" Height="37" VerticalAlignment="Top" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
         <CustomButton:Button HorizontalAlignment="Right" Margin="0,11,15,0" VerticalAlignment="Top" Height="20" Width="20" RoundX="10" RoundY="10" Text="" FillColor="#FF630000" StrokeColor="Black" FontFamily="Arial" FontSize="10" HoverColor="Red" DownColor="#FF380000">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonUp">
@@ -45,6 +50,7 @@
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </CustomButton:Button>
+        <Label x:Name="label" Content="Fight Club" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
 
 
     </Grid>

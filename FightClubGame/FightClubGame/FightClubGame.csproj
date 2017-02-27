@@ -66,6 +66,8 @@
     <Compile Include="Core\Computer.cs" />
     <Compile Include="Core\IActor.cs" />
     <Compile Include="Core\IFighter.cs" />
+    <Compile Include="Core\Player.cs" />
+    <Compile Include="CustomEventHandler.cs" />
     <Compile Include="Fighters\Centaur.cs" />
     <Compile Include="Fighters\Human.cs" />
     <Compile Include="Fighters\Ogre.cs" />
